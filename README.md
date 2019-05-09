@@ -4,6 +4,8 @@
 
 ##Dependencies
 
+[Yahoo Weather API key](https://developer.yahoo.com/weather/)
+
 [json](http://rubygems.org/gems/json)
 
 Add the gem to your dashing gemfile:
@@ -17,6 +19,9 @@ and run `bundle install`.
 To use this widget, copy `klimato.coffee`, `klimato.html`, and `klimato.sass` into the `/widgets/klimato` directory. Put the `klimato.rb` file in your `/jobs` folder, the 4 font files (.EOT, .WOFF, .SVG & .TTF) in your `/assets/fonts` directory and the `climacons-font.css` in your `/assets/stylesheets` directory.
 
 You can change `klimato.html` if you don't want german words in it.
+
+You need to add your API key, your consumer secret and consumer key to the `klimato.rb` file in your `/jobs` folder.
+
 
 To include the widget into your dashboard add the following code:
 
