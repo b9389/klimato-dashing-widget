@@ -5,7 +5,6 @@
 ##Dependencies
 
 [json](http://rubygems.org/gems/json)
-openssl
 
 Add the gem to your dashing gemfile:
 
@@ -31,5 +30,5 @@ You are also able to change the metrics unit for your widget by editing the form
 
 ##Preview
 
-![cold](https://f.cloud.github.com/assets/1248374/346213/abe9a4f4-9e3a-11e2-8857-b2e740024c86.png)
-![hot](https://f.cloud.github.com/assets/1248374/346214/ac034382-9e3a-11e2-821a-06df468dd448.png)
+![preview](images/preview.png)
+
