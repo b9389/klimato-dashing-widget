@@ -1,4 +1,21 @@
-<h1 data-bind="temperature"></h1>
-<h2 data-bind-class="code | prepend 'klimato-'"></h2>
-<h3 data-bind="location"></h3>
-<p class="updated-at" data-bind="updatedAtMessage"></p>
+<table>
+	<tr>
+		<h1 data-bind="temperature"></h1>
+		<h2 data-bind-class="code | prepend 'klimato-'"></h2>
+		<h3>HEUTE</h3>
+	</tr>
+	<tr>
+		<td class="top center">
+			<h2 data-bind-class="forecast1Icon | prepend 'klimato-'"></h2>
+			<p data-bind="forecast1"></p>
+			<h3>MORGEN</h3>
+		</td>
+		<td class="top">
+			<h2 data-bind-class="forecast2Icon | prepend 'klimato-'"></h2>
+			<p data-bind="forecast2"></p>
+			<h3>&UumlBERMORGEN</h3>
+		</td>
+	</tr>
+</table>
+<br/>
+<!--<h3 data-bind="location"></h3>-->
