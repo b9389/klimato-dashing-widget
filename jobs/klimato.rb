@@ -54,17 +54,13 @@ SCHEDULER.every "15m", :first_in => 0 do |job|
   }
 
   parameterString = query_string(params)
-  puts "params: "+ parameterString
+
 
   signature = "GET&#{ERB::Util.url_encode(url)}&" + ERB::Util.url_encode(parameterString)
 
-  puts 'signature: '+ signature
-  oauth_signature = Base64.encode64("#{OpenSSL::HMAC.digest('sha1',"#{consumerSecret}&", signature)}").chomp.gsub( /\n/, '' )
-  puts 'oauth_signature: '+ oauth_signature
+  oauth_signature = Base64.encode64("#{OpenSSL::HMAC.digest('sha1',"#{consumerSecret}&", signature)}").chomp.gsub( /\n/, ''
 
   authorizationLine = "OAuth oauth_consumer_key=\"#{consumerKey}\", oauth_nonce=\"#{nonce}\", oauth_timestamp=\"#{timestamp}\", oauth_signature_method=\"HMAC-SHA1\", oauth_signature=\"#{oauth_signature}\", oauth_version=\"1.0\""
-  puts authorizationLine
-  puts("nonce: #{nonce} timestamp: #{timestamp}")
 
   http = Net::HTTP.new("weather-ydn-yql.media.yahoo.com", 443)
   http.use_ssl = true
@@ -73,7 +69,7 @@ SCHEDULER.every "15m", :first_in => 0 do |job|
 
 
   response = http.request(req)
-  puts(response.body)
+
   json = JSON.parse response.body
   results = json
 
