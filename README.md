@@ -1,10 +1,11 @@
 ## Description
 
-[Dashing](http://shopify.github.com/dashing) widget to display weather from [Yahoo! Weather](http://developer.yahoo.com/weather/) using [Climacons Font](http://adamwhitcroft.com/climacons/font/). Also the background of the widget automatically changes to the current temperature outside.
+[Dashing](http://shopify.github.com/dashing) / [Smashing](https://github.com/Smashing) widget to display weather from [Yahoo! Weather](http://developer.yahoo.com/weather/) using [Climacons Font](http://adamwhitcroft.com/climacons/font/). The current weather is displayed on top. Underneath is the forecast for the next two days.
 
 ##Dependencies
 
 [json](http://rubygems.org/gems/json)
+openssl
 
 Add the gem to your dashing gemfile:
 
