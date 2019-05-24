@@ -81,7 +81,7 @@ SCHEDULER.every "15m", :first_in => 0 do |job|
     # Forecast
     forecast = results["forecasts"]
     send_event "klimato", { location: location["city"], temperature: today["temperature"], code: today["code"], format: format,
-    forecast1: forecast[1]["low"].to_s+"\u00b0 - "+forecast[1]["high"].to_s+"\u00b0", forecast1Icon: forecast[1]["code"],
-    forecast2: forecast[2]["low"].to_s+"\u00b0 - "+forecast[2]["high"].to_s+"\u00b0", forecast2Icon: forecast[2]["code"],}
+    forecast1: forecast[1]["low"].to_s+"\u00b0 - "+forecast[1]["high"].to_s+"\u00b0", forecast1Icon: forecast[1]["code"], forecast1day: forecast[1]["day"].upcase,
+    forecast2: forecast[2]["low"].to_s+"\u00b0 - "+forecast[2]["high"].to_s+"\u00b0", forecast2Icon: forecast[2]["code"], forecast2day: forecast[2]["day"].upcase}
   end
 end
