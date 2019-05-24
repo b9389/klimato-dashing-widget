@@ -25,7 +25,7 @@ consumerSecret = "YOUR SECRET";
 
 url = URI::encode "https://weather-ydn-yql.media.yahoo.com/forecastrss";
 
-query  = URI::encode "?woeid=681193&format=json&u=#{format}"
+query  = URI::encode "?woeid=#{woeid}&format=json&u=#{format}"
 
 def query_string(params)
   pairs = []
