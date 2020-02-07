@@ -58,7 +58,7 @@ SCHEDULER.every "15m", :first_in => 0 do |job|
 
   signature = "GET&#{ERB::Util.url_encode(url)}&" + ERB::Util.url_encode(parameterString)
 
-  oauth_signature = Base64.encode64("#{OpenSSL::HMAC.digest('sha1',"#{consumerSecret}&", signature)}").chomp.gsub( /\n/, ''
+  oauth_signature = Base64.encode64("#{OpenSSL::HMAC.digest('sha1',"#{consumerSecret}&", signature)}").chomp.gsub( /\n/, '')
 
   authorizationLine = "OAuth oauth_consumer_key=\"#{consumerKey}\", oauth_nonce=\"#{nonce}\", oauth_timestamp=\"#{timestamp}\", oauth_signature_method=\"HMAC-SHA1\", oauth_signature=\"#{oauth_signature}\", oauth_version=\"1.0\""
 
